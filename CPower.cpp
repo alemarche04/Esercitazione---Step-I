@@ -104,7 +104,7 @@ double Power::GetValue(double in)
 {
 	// ( k * in ) ^ e
 	// pow(a, b) = a^b
-	return k_coeff*(pow(in, e_coeff));
+	return (k_coeff*(pow(in, e_coeff)));
 }
 
 
