@@ -6,6 +6,7 @@
 */ 
 
 #include "CPower.h"
+#include <cmath>
 
 /// @brief default constructor
 Power::Power()
@@ -104,6 +105,11 @@ double Power::GetValue(double in)
 {
 	// ( k * in ) ^ e
 	// pow(a, b) = a^b
+	if(fmod(e_coeff, 0.5) == 0 && (k_coeff*in) < 0)
+		{
+			ErrorMessage("GetValue: even root of negative number is not possible");
+			exit(-1);
+		}
 	return (k_coeff*(pow(in, e_coeff)));
 }
 
@@ -112,7 +118,7 @@ double Power::GetValue(double in)
 /// @param string message to be printed
 void Power::ErrorMessage(const char *string) 
 {	
-	cout << endl << "ERROR -- Polynomial --";
+	cout << endl << "ERROR -- Power --";
 	cout << string << endl;
 }
 
@@ -120,7 +126,7 @@ void Power::ErrorMessage(const char *string)
 /// @param string message to be printed
 void Power::WarningMessage(const char *string)
 {	
-	cout << endl << "WARNING -- Polynomial --";
+	cout << endl << "WARNING -- Power --";
 	cout << string << endl;
 }
 

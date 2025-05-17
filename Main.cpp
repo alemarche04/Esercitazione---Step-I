@@ -14,6 +14,7 @@ int main()
 
 	pow1.SetPower(3, 0.5); // pow1 = 3*x^0.5
 	pow1.Dump();
+	cout << endl << "Value of pow1 = 3*x^0.5 if x = -2: " << pow1.GetValue(-2) << endl; // expected error
 	cout << endl << "Value of pow1 = 3*x^0.5 if x = 2: " << pow1.GetValue(2) << endl; // expected 4,24264
 
 	Power pow2(2, -3);  // pow2 = 2*x^-3
