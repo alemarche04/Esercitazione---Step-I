@@ -1,5 +1,5 @@
-/*! @file CPolynomial.cpp
-	@brief Implementation of Polynomial class 
+/*! @file CPower.cpp
+	@brief Implementation of Power class 
 	@author Alessia Marchese
 
 	Details.
@@ -95,6 +95,36 @@ void Power::SetPower(double k, double e)
 {
 	k_coeff = k;
 	e_coeff = e;
+}
+
+
+/// @brief sets the coefficient k
+///	@param k coefficient
+void Power::SetK(double k)
+{
+	SetPower(k, e_coeff);
+}
+
+
+/// @brief sets the coefficient k
+///	@param k coefficient
+void Power::SetE(double e)
+{
+	SetPower(k_coeff, e);
+}
+
+
+/// @brief returns the value of k_coeff
+double Power::GetK()
+{
+	return k_coeff;
+}
+
+
+/// @brief returns the value of e_coeff
+double Power::GetE()
+{
+	return e_coeff;
 }
 
 

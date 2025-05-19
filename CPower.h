@@ -40,8 +40,12 @@ public:
 
 	/// @name GETTERS / SETTERS
 	/// @{
+	void SetK(double k);
+	void SetE(double e);
 	void SetPower(double k, double e);
 	double GetValue(double in);
+	double GetK();
+	double GetE();
 	/// @}
 
 	/// @name DEBUG and SERIALIZATION 
