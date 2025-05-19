@@ -158,7 +158,8 @@ double Exponential::GetC()
 ///	@return the value of the function
 double Exponential::GetValue(double in)
 {
-	if(fmod((c_coeff * in), 0.5) == 0 && k_coeff < 0)
+	double e_i = pow((c_coeff * in), -1);
+	if(fmod(e_i, 2) == 0 && k_coeff < 0)
 		{
 			ErrorMessage("GetValue: even root of negative number is not possible");
 			exit(-1);
